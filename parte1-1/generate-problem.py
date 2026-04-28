@@ -122,10 +122,10 @@ def setup_location_coords(options):
     return location_coords
 
 
-# This function generates a random set of goals.
+# This function generates a random set of requests.
 # After you run this, need[personid][contentid] is true if and only if
-# the goal is for the person to have a crate with the specified content.
-# You will use this to create goal statements in PDDL.
+# the person should receive a crate with the specified content.
+# You will use this to create the initial state for SHOP2.
 def setup_person_needs(options, crates_with_contents):
     need = [[False for i in range(len(content_types))] for j in range(options.persons)]
     goals_per_contents = [0 for i in range(len(content_types))]
@@ -254,67 +254,45 @@ def main():
                    "_g" + str(options.goals) + "_ct" + str(len(content_types))
 
     # Open output file
-    with open(problem_name + ".pddl", 'w') as f:
-        # Write the initial part of the problem
+    with open(problem_name, 'w') as f:
+        # Write a SHOP2 problem file.
 
-        f.write("(define (problem " + problem_name + ")\n")
-        f.write("(:domain drone-domain)\n")
-        f.write("(:objects\n")
+        f.write("(defproblem " + problem_name + " emergency\n")
+        f.write("(\n")
 
         ######################################################################
-        # Write objects
-
-        # TODO: Change the type names below (drone, location, ...)
-        # to suit your domain.
+        # Initial state
 
         for x in drone:
-            f.write("\t" + x + " - drone\n")
+            f.write("  (at " + x + " depot)\n")
+            f.write("  (libre " + x + " brazo1)\n")
 
-        for x in location:
-            f.write("\t" + x + " - location\n")
-
-        for x in crate:
-            f.write("\t" + x + " - crate\n")
-
-        for x in content_types:
-            f.write("\t" + x + " - contents\n")
-
-        for x in person:
-            f.write("\t" + x + " - person\n")
-
-        for x in carrier:
-            f.write("\t" + x + " - carrier\n")
-
-        f.write(")\n")
-
-        ######################################################################
-        # Generate an initial state
-
-        f.write("(:init\n")
-
-        # TODO: Initialize all facts here!
-
-        f.write(")\n")
-
-        ######################################################################
-        # Write Goals
-
-        f.write("(:goal (and\n")
-
-        # All Drones should end up at the depot
-        for x in drone:
-            f.write("\n")
-            # TODO: Write a goal that the drone x is at the depot
+        for x in range(options.crates):
+            crate_name = crate[x]
+            content_name = content_types[0]
+            for y in range(len(content_types)):
+                if crate_name in crates_with_contents[y]:
+                    content_name = content_types[y]
+                    break
+            f.write("  (at " + crate_name + " depot)\n")
+            f.write("  (tipo " + crate_name + " " + content_name + ")\n")
 
         for x in range(options.persons):
+            person_name = person[x]
+            person_location = location[random.randint(0, len(location) - 1)]
+            f.write("  (at " + person_name + " " + person_location + ")\n")
             for y in range(len(content_types)):
                 if need[x][y]:
-                    person_name = person[x]
-                    content_name = content_types[y]
-                    # TODO: write a goal that the person needs a crate
-                    # with this specific content
+                    f.write("  (necesita " + person_name + " " + content_types[y] + ")\n")
 
-        f.write("\t))\n")
+        f.write(")\n")
+
+        ######################################################################
+        # Initial task list
+
+        f.write("(\n")
+        f.write("  (enviar-todo)\n")
+        f.write(")\n")
         f.write(")\n")
 
 

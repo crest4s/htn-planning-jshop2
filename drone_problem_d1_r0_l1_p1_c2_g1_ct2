@@ -1,0 +1,15 @@
+(defproblem problem emergency
+(
+  (at drone1 depot)
+  (libre drone1 brazo1)
+  (at crate1 depot)
+  (tipo crate1 food)
+  (at crate2 depot)
+  (tipo crate2 medicine)
+  (at person1 depot)
+  (necesita person1 medicine)
+)
+(
+  (enviar-todo)
+)
+)

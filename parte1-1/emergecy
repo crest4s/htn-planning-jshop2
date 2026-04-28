@@ -1,0 +1,48 @@
+(defdomain emergency (
+  ;; --- OPERADORES ---
+  (:operator (!vuelo ?d ?origen ?destino)
+    ((at ?d ?origen))
+    ((not (at ?d ?origen)))
+    ((at ?d ?destino)))
+
+  (:operator (!recoger ?d ?brazo ?caja ?loc)
+    ((at ?d ?loc) 
+    (at ?caja ?loc) 
+    (libre ?d ?brazo))
+    ((not (at ?caja ?loc)) 
+    (not (libre ?d ?brazo)) 
+    (en-brazo ?d ?brazo ?caja))
+    ())
+
+  (:operator (!entregar ?d ?brazo ?caja ?persona ?loc ?cont)
+    ((at ?d ?loc) (at ?persona ?loc) 
+    (en-brazo ?d ?brazo ?caja) 
+    (tipo ?caja ?cont))
+    ((not (en-brazo ?d ?brazo ?caja)) 
+    (libre ?d ?brazo) 
+    (tiene ?persona ?cont))
+    ())
+
+  ;; --- MÉTODOS ---
+  ;; Tarea principal: busca a alguien con necesidad y lanza la logística
+  (:method (enviar-todo)
+    atencion-pendiente
+    ((necesita ?p ?cont) 
+    (not (tiene ?p ?cont))) 
+    (:ordered (atender-persona ?p ?cont) 
+    (enviar-todo))
+    
+    finalizado
+    ()
+    () 
+  )
+
+  (:method (atender-persona ?p ?cont)
+    logistica-basica
+    ((at ?p ?l) (at ?caja deposito) (tipo ?caja ?cont) (at ?d ?ldron))
+    (:ordered (!vuelo ?d ?ldron deposito) 
+              (!recoger ?d brazo1 ?caja deposito)
+              (!vuelo ?d deposito ?l)
+              (!entregar ?d brazo1 ?caja ?p ?l ?cont))
+  )
+))
