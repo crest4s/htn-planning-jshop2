@@ -257,7 +257,7 @@ def main():
     with open(problem_name, 'w') as f:
         # Write a SHOP2 problem file.
 
-        f.write("(defproblem " + problem_name + " emergency\n")
+        f.write("(defproblem " + "problem" + " emergency\n")
         f.write("(\n")
 
         ######################################################################
