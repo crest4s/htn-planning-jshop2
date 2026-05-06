@@ -1,0 +1,21 @@
+(defproblem problem_d1_r0_l2_p2_c4_g2 emergency
+(
+  (at drone1 depot)
+  (libre drone1 brazo1)
+  (at crate1 depot)
+  (tipo crate1 food)
+  (at crate2 depot)
+  (tipo crate2 food)
+  (at crate3 depot)
+  (tipo crate3 food)
+  (at crate4 depot)
+  (tipo crate4 medicine)
+  (at person1 loc1)
+  (necesita person1 food)
+  (necesita person1 medicine)
+  (at person2 loc1)
+)
+(
+  (enviar-todo)
+)
+)
