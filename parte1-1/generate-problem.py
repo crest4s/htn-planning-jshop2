@@ -150,7 +150,7 @@ def main():
     output_path = os.path.join(options.output_dir, problem_name + ".lisp")
 
     with open(output_path, 'w') as f:
-        f.write(f"(defproblem {problem_name} emergency\n(\n")
+        f.write(f"(defproblem problem emergency\n(\n")
 
         for x in drone:
             f.write(f"  (at {x} depot)\n")
