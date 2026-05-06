@@ -1,4 +1,4 @@
-(defdomain emergencia (
+(defdomain emergency (
   ;; --- OPERADORES ---
   (:operator (!vuelo ?d ?o ?dest)
     ((at ?d ?o))

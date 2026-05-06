@@ -155,6 +155,7 @@ def main():
         for x in drone:
             f.write(f"  (at {x} depot)\n")
             f.write(f"  (libre {x} brazo1)\n")
+            f.write(f"  (libre {x} brazo2)\n")
 
         for x in range(options.crates):
             crate_name = crate[x]
