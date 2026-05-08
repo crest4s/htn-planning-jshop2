@@ -1,0 +1,24 @@
+(defproblem problem emergency2
+  ;; --- ESTADO INICIAL ---
+  (
+    ;; Posición y estado del dron
+    (at dron1 depot)
+    (dron-libre dron1)
+
+    ;; Cajas en el depósito (5 de cada)
+    (cajas depot comida 5)
+    (cajas depot medicina 5)
+    
+    ;; Necesidad en la localización destino (1 de comida, 1 de medicina)
+    (necesidad loc1 comida 1)
+    (necesidad loc1 medicina 1)
+
+    ;; IMPORTANTE: No declaramos ningún (at-trans ...).
+    ;; No hay transportadores en este problema.
+  )
+
+  ;; --- TAREAS ---
+  (
+    (enviar-todo)
+  )
+)

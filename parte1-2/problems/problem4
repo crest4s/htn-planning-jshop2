@@ -1,0 +1,37 @@
+(defproblem problem emergency2
+  ;; --- ESTADO INICIAL ---
+  (
+    ;; Dron
+    (at dron1 depot)
+    (dron-libre dron1)
+
+    ;; Múltiples transportadores
+    (at-trans t_grande depot)
+    (capacidad-trans t_grande 20)
+    (carga t_grande comida 0)
+    (carga t_grande medicina 0)
+
+    (at-trans t_mediano depot)
+    (capacidad-trans t_mediano 6)
+    (carga t_mediano comida 0)
+    (carga t_mediano medicina 0)
+
+    (at-trans t_pequeno depot)
+    (capacidad-trans t_pequeno 2)
+    (carga t_pequeno comida 0)
+    (carga t_pequeno medicina 0)
+
+    ;; Cajas en el depósito
+    (cajas depot comida 10)
+    (cajas depot medicina 10)
+    
+    ;; Necesidad (Total: 5)
+    (necesidad loc1 comida 3)
+    (necesidad loc1 medicina 2)
+  )
+
+  ;; --- TAREAS ---
+  (
+    (enviar-todo)
+  )
+)

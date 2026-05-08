@@ -1,0 +1,28 @@
+(defproblem problem emergency2
+  ;; --- ESTADO INICIAL ---
+  (
+    ;; Dron
+    (at dron1 depot)
+    (dron-libre dron1)
+
+    ;; Transportador PEQUEÑO (Capacidad 2)
+    (at-trans t1 depot)
+    (capacidad-trans t1 2)
+    (carga t1 comida 0)
+    (carga t1 medicina 0)
+
+    ;; Cajas en el depósito suficientes
+    (cajas depot comida 10)
+    (cajas depot medicina 10)
+    
+    ;; Necesidad en la localización (Total: 3)
+    ;; El transportador solo puede llevar 2. Quedará 1 pendiente.
+    (necesidad loc1 comida 2)
+    (necesidad loc1 medicina 1)
+  )
+
+  ;; --- TAREAS ---
+  (
+    (enviar-todo)
+  )
+)
