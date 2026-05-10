@@ -1,0 +1,28 @@
+/home/crest4s/Desktop/planificacion-automatica/jshop2-pa/JSHOP2/jshop2-console/JSHOP2.jar:/home/crest4s/Desktop/planificacion-automatica/jshop2-pa/JSHOP2/jshop2-console/antlr.jar:.
+
+1 plan(s) were found:
+
+Plan #1:
+Plan cost: 168.5
+
+(!cargar t_grande comida 5.0 depot)
+(!cargar t_grande medicina 5.0 depot)
+(!cargar t_grande comida 1.0 depot)
+(!cargar t_grande medicina 1.0 depot)
+(!coger-transportador dron1 t_grande depot)
+(!vuelo dron1 depot loc1 15.0)
+(!dejar-transportador dron1 t_grande loc1)
+(!entregar t_grande comida 5.0 loc1)
+(!entregar t_grande medicina 5.0 loc1)
+(!coger-transportador dron1 t_grande loc1)
+(!vuelo dron1 loc1 loc2 15.0)
+(!dejar-transportador dron1 t_grande loc2)
+(!entregar t_grande comida 1.0 loc2)
+(!entregar t_grande medicina 1.0 loc2)
+(!coger-transportador dron1 t_grande loc2)
+(!vuelo dron1 loc2 depot 15.0)
+(!dejar-transportador dron1 t_grande depot)
+--------------------
+
+Time Used = 0.002
+
