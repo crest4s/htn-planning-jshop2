@@ -1,0 +1,29 @@
+/home/crest4s/Desktop/planificacion-automatica/jshop2-pa/JSHOP2/jshop2-console/JSHOP2.jar:/home/crest4s/Desktop/planificacion-automatica/jshop2-pa/JSHOP2/jshop2-console/antlr.jar:.
+
+1 plan(s) were found:
+
+Plan #1:
+Plan cost: 217.2
+
+(!cargar t_mediano comida 8.0 depot)
+(!coger-transportador dron1 t_mediano depot)
+(!vuelo dron1 depot loc1 8.0)
+(!dejar-transportador dron1 t_mediano loc1)
+(!entregar t_mediano comida 8.0 loc1)
+(!coger-transportador dron1 t_mediano loc1)
+(!vuelo dron1 loc1 depot 8.0)
+(!dejar-transportador dron1 t_mediano depot)
+(!cargar t_mediano comida 2.0 depot)
+(!cargar t_mediano medicina 5.0 depot)
+(!coger-transportador dron1 t_mediano depot)
+(!vuelo dron1 depot loc1 8.0)
+(!dejar-transportador dron1 t_mediano loc1)
+(!entregar t_mediano comida 2.0 loc1)
+(!entregar t_mediano medicina 5.0 loc1)
+(!coger-transportador dron1 t_mediano loc1)
+(!vuelo dron1 loc1 depot 8.0)
+(!dejar-transportador dron1 t_mediano depot)
+--------------------
+
+Time Used = 0.002
+
