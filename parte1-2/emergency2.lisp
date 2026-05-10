@@ -1,7 +1,7 @@
 (defdomain emergency2 (
 
   ;; ==========================================
-  ;; 1. AXIOMAS (Refactorizados para JSHOP2)
+  ;; 1. AXIOMAS 
   ;; ==========================================
   
   (:- (necesidad-total ?l ?total)
@@ -109,7 +109,7 @@
 
   (:method (enviar-todo)
     
-    ;; PRIORIDAD 0: Ruta Multiparada (Atender 2 localizaciones en el mismo viaje)
+    ;; PRIORIDAD 0: Ruta multiparada
     hay_multiparada
     (
       (max-loc-necesidad ?l1 ?t1)
@@ -119,7 +119,7 @@
       (assign ?total_need (call + ?t1 ?t2))
       (at dron1 ?ld)
       (dron-libre dron1)
-      ;; Busca si hay algún transportador que pueda con la suma de AMBAS necesidades
+      ;; Busca si hay algún transportador que pueda con la suma de ambas necesidades
       (mejor-trans-suficiente ?t ?cap ?total_need)
       (necesidad ?l1 comida ?nc1)
       (necesidad ?l1 medicina ?nm1)
@@ -144,7 +144,6 @@
     ()
   )
 
-  ;; MÉTODO NUEVO: Ejecuta la ruta multi-parada
   (:method (atender-multiparada ?l1 ?l2 ?t ?cap ?nc1 ?nm1 ?nc2 ?nm2)
     hacer_ruta
     (
@@ -213,7 +212,7 @@
       (!entregar-suelta dron1 medicina ?l)
     )
 
-    ;; PRIORIDAD 2: Hay un transportador SUFICIENTE
+    ;; PRIORIDAD 2: Hay un transportador suficiente
     con_trans_suficiente
     (
       (at dron1 ?ld)
@@ -236,7 +235,7 @@
       (!dejar-transportador dron1 ?t depot)
     )
 
-    ;; PRIORIDAD 3: Transportador INSUFICIENTE
+    ;; PRIORIDAD 3: Transportador insuficiente
     con_trans_insuficiente
     (
       (at dron1 ?ld)
@@ -289,7 +288,7 @@
     )
   )
 
-  ;; --- Métodos Auxiliares ---
+  ;; --- Métodos auxiliares ---
   
   (:method (carga-maxima ?t ?cap ?nc ?nm ?l)
     solo_comida
