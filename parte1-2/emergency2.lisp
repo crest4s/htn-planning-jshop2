@@ -166,7 +166,7 @@
       (entrega-si-necesario ?t medicina ?nm1 ?l1)
       (!coger-transportador dron1 ?t ?l1)
       
-      ;; 4. Vuela DIRECTO al segundo destino (Sin pasar por depot)
+      ;; 4. Vuela al segundo destino sin pasar por depot
       (ir-a dron1 ?l1 ?l2 ?cap)
       (!dejar-transportador dron1 ?t ?l2)
       (entrega-si-necesario ?t comida ?nc2 ?l2)

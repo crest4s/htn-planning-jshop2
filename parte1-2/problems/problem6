@@ -7,7 +7,7 @@
 
     ;; Transportadores
     (at-trans t_grande depot)
-    (capacidad-trans t_grande 15)
+    (capacidad-trans t_grande 10)
     (carga t_grande comida 0)
     (carga t_grande medicina 0)
 
@@ -21,11 +21,11 @@
     (cajas depot medicina 20)
     
     ;; Necesidades
-    (necesidad loc1 comida 5)
-    (necesidad loc1 medicina 5) ; Total: 10
+    (necesidad loc1 comida 1)
+    (necesidad loc1 medicina 1) ; Total: 2
 
-    (necesidad loc2 comida 1)
-    (necesidad loc2 medicina 1) ; Total: 2
+    (necesidad loc2 comida 5)
+    (necesidad loc2 medicina 5) ; Total: 10
   )
 
   ;; --- TAREAS ---
