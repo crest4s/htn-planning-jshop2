@@ -1,0 +1,44 @@
+/home/andrea/JSHOP2/jshop2-console/JSHOP2.jar:/home/andrea/JSHOP2/jshop2-console/antlr.jar:.
+
+1 plan(s) were found:
+
+Plan #1:
+Plan cost: 33.0
+
+(!recoger drone1 brazo1 crate1 depot)
+(!recoger drone1 brazo2 crate2 depot)
+(!vuelo drone1 depot loc10)
+(!entregar drone1 brazo1 crate1 person2 loc10 food)
+(!entregar drone1 brazo2 crate2 person5 loc10 food)
+(!vuelo drone1 loc10 depot)
+(!recoger drone1 brazo1 crate3 depot)
+(!recoger drone1 brazo2 crate4 depot)
+(!vuelo drone1 depot loc4)
+(!entregar drone1 brazo1 crate3 person7 loc4 food)
+(!vuelo drone1 loc4 loc5)
+(!entregar drone1 brazo2 crate4 person10 loc5 food)
+(!vuelo drone1 loc5 depot)
+(!recoger drone1 brazo1 crate5 depot)
+(!recoger drone1 brazo2 crate6 depot)
+(!vuelo drone1 depot loc8)
+(!entregar drone1 brazo1 crate5 person1 loc8 medicine)
+(!vuelo drone1 loc8 loc3)
+(!entregar drone1 brazo2 crate6 person3 loc3 medicine)
+(!vuelo drone1 loc3 depot)
+(!recoger drone1 brazo1 crate7 depot)
+(!recoger drone1 brazo2 crate8 depot)
+(!vuelo drone1 depot loc5)
+(!entregar drone1 brazo1 crate7 person4 loc5 medicine)
+(!vuelo drone1 loc5 loc4)
+(!entregar drone1 brazo2 crate8 person7 loc4 medicine)
+(!vuelo drone1 loc4 depot)
+(!recoger drone1 brazo1 crate9 depot)
+(!recoger drone1 brazo2 crate10 depot)
+(!vuelo drone1 depot loc10)
+(!entregar drone1 brazo1 crate9 person9 loc10 medicine)
+(!vuelo drone1 loc10 loc5)
+(!entregar drone1 brazo2 crate10 person10 loc5 medicine)
+--------------------
+
+Time Used = 0.011
+

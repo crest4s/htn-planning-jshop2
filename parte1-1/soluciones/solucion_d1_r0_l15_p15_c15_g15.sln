@@ -1,0 +1,62 @@
+/home/andrea/JSHOP2/jshop2-console/JSHOP2.jar:/home/andrea/JSHOP2/jshop2-console/antlr.jar:.
+
+1 plan(s) were found:
+
+Plan #1:
+Plan cost: 51.0
+
+(!recoger drone1 brazo1 crate1 depot)
+(!recoger drone1 brazo2 crate2 depot)
+(!vuelo drone1 depot loc14)
+(!entregar drone1 brazo1 crate1 person2 loc14 food)
+(!vuelo drone1 loc14 loc11)
+(!entregar drone1 brazo2 crate2 person3 loc11 food)
+(!vuelo drone1 loc11 depot)
+(!recoger drone1 brazo1 crate3 depot)
+(!recoger drone1 brazo2 crate4 depot)
+(!vuelo drone1 depot loc7)
+(!entregar drone1 brazo1 crate3 person4 loc7 food)
+(!vuelo drone1 loc7 loc4)
+(!entregar drone1 brazo2 crate4 person5 loc4 food)
+(!vuelo drone1 loc4 depot)
+(!recoger drone1 brazo1 crate5 depot)
+(!recoger drone1 brazo2 crate6 depot)
+(!vuelo drone1 depot loc14)
+(!entregar drone1 brazo1 crate5 person6 loc14 food)
+(!vuelo drone1 loc14 loc1)
+(!entregar drone1 brazo2 crate6 person7 loc1 food)
+(!vuelo drone1 loc1 depot)
+(!recoger drone1 brazo1 crate7 depot)
+(!recoger drone1 brazo2 crate8 depot)
+(!vuelo drone1 depot loc5)
+(!entregar drone1 brazo1 crate7 person8 loc5 food)
+(!entregar drone1 brazo2 crate8 person11 loc5 food)
+(!vuelo drone1 loc5 depot)
+(!recoger drone1 brazo1 crate9 depot)
+(!recoger drone1 brazo2 crate10 depot)
+(!vuelo drone1 depot loc10)
+(!entregar drone1 brazo1 crate9 person12 loc10 food)
+(!vuelo drone1 loc10 loc12)
+(!entregar drone1 brazo2 crate10 person13 loc12 food)
+(!vuelo drone1 loc12 depot)
+(!recoger drone1 brazo1 crate11 depot)
+(!recoger drone1 brazo2 crate12 depot)
+(!vuelo drone1 depot loc6)
+(!entregar drone1 brazo1 crate11 person14 loc6 food)
+(!vuelo drone1 loc6 loc12)
+(!entregar drone1 brazo2 crate12 person15 loc12 food)
+(!vuelo drone1 loc12 depot)
+(!recoger drone1 brazo1 crate13 depot)
+(!recoger drone1 brazo2 crate14 depot)
+(!vuelo drone1 depot loc4)
+(!entregar drone1 brazo1 crate13 person5 loc4 medicine)
+(!vuelo drone1 loc4 loc5)
+(!entregar drone1 brazo2 crate14 person8 loc5 medicine)
+(!vuelo drone1 loc5 depot)
+(!recoger drone1 brazo1 crate15 depot)
+(!vuelo drone1 depot loc10)
+(!entregar drone1 brazo1 crate15 person12 loc10 medicine)
+--------------------
+
+Time Used = 0.013
+

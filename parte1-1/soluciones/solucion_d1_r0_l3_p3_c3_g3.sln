@@ -1,0 +1,20 @@
+/home/andrea/JSHOP2/jshop2-console/JSHOP2.jar:/home/andrea/JSHOP2/jshop2-console/antlr.jar:.
+
+1 plan(s) were found:
+
+Plan #1:
+Plan cost: 9.0
+
+(!recoger drone1 brazo1 crate1 depot)
+(!recoger drone1 brazo2 crate2 depot)
+(!vuelo drone1 depot loc3)
+(!entregar drone1 brazo1 crate1 person1 loc3 food)
+(!entregar drone1 brazo2 crate2 person1 loc3 medicine)
+(!vuelo drone1 loc3 depot)
+(!recoger drone1 brazo1 crate3 depot)
+(!vuelo drone1 depot loc2)
+(!entregar drone1 brazo1 crate3 person2 loc2 medicine)
+--------------------
+
+Time Used = 0.006
+
